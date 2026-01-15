@@ -1,10 +1,19 @@
 from PyQt6.QtCore import Qt 
+import os
+import sys
 
-#database path
-PATH = 'my_database.db'
+if getattr(sys, 'frozen', False):
+    # EXE
+    BASE_DIR = os.path.dirname(sys.executable)
+else:
+    # .py
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-#ICON PATH
-PATH_TO_ICON = "C:/Users/Babazaki/Desktop/76666/PathOfCount/Icon.png"
+# Path
+PATH = os.path.join(BASE_DIR, 'my_database.db')
+PATH_TO_ICON = os.path.join(BASE_DIR, 'assets', 'Icon.png')
+
+
 
 #List Oof games
 GAMES = {
@@ -101,11 +110,4 @@ STYLE_SHEET = '''
         background-color: #4d4d4d;
     }
 '''
-	
-# HOTKEYS = {
-#     '<ctrl>+<alt>+k': self.kill_application,
-#     'clickableness': 'ctrl+shift+alt+l',
-#     'movebleness': 'ctrl+shift+alt+m',
-
-
-# }    
+	   
