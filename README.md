@@ -42,7 +42,7 @@ Download the latest release: [Releases](https://github.com/YOUR_USERNAME/PathOfC
 ### Steps
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/PathOfCount.git
+git clone https://github.com/ArtemIvannikov/PathOfCount.git
 cd PathOfCount
 
 # Install dependencies
